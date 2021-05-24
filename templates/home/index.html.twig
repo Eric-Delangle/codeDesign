@@ -5,6 +5,16 @@
 
 {% block body %}
 	<div class="container text-center">
-		<img src="images/design/codeDesign.png" alt="logo">
-	</div>
-{% endblock %}
+		<div>
+
+			<img id="banniere" src="images/design/codeDesign.png" alt="" usemap="#map1621695888767" style="no-repeat">
+			<map id="map1621695888767" name="map1621695888767">
+
+
+				<area onmouseover="bougeCode(this)" onmouseout="upCode(this)" shape="rect" coords="105,190,169,219" title="code" alt="code" href="https://ericdelangle.fr/code" target="_self">
+
+				<area onmouseover="bougeDesign(this)" onmouseout="upDesign(this)" class="design" shape="rect" coords="363,198,468,241" title="design" alt="design" href="https://ericdelangle.fr/design" target="_self">
+
+			</div>
+		</div>
+	{% endblock %}
