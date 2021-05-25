@@ -14,21 +14,22 @@ import './bootstrap';
 
 /* ANIMATION DE LA BANNIERE */
 
-function bougeCode() {
+const bougeC = function bougeCode () {
 	document.getElementById('banniere').classList.add('code');
-	};
-	
-	
-	function upCode() {
+};
+bougeC();
+
+const upC = function upCode () {
 	document.getElementById('banniere').classList.remove('code');
-	};
-	
-	
-	function bougeDesign() {
+};
+upC(); 
+
+const bougeD = function bougeDesign () {
 	document.getElementById('banniere').classList.add('design');
-	};
-	
-	
-	function upDesign() {
+};
+bougeD();
+
+const upD = function upDesign () {
 	document.getElementById('banniere').classList.remove('design');
-	};
+};
+upD();
