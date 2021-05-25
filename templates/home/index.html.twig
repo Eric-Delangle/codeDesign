@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!
+{% block title %}Eric Delangle développement/graphisme
 {% endblock %}
 
 {% block body %}
@@ -16,5 +16,45 @@
 				<area onmouseover="bougeDesign(this)" onmouseout="upDesign(this)" class="design" shape="rect" coords="363,198,468,241" title="design" alt="design" href="https://ericdelangle.fr/design" target="_self">
 
 			</div>
+			<div class="container">
+				<p class="text-center intro">
+					C'est après avoir créé mes propres sites persos au fil de mes activités de peintre que je suis arrivé au développement.
+																																																																																																					
+																																																																													J'ai appris à utiliser le framework Symfony de façon a créer des applications sures et robustes. Je continue mon apprentissage en étudiant le développement front-end avec React.
+																																																																																																					
+																																																																													Afin de sortir un peu de l'isolement créé par la pratique du code et de la peinture je propose le dépannage informatique pour les particuliers.
+																																																																																																					
+																																																																													J'exerce maintenant mon activité de développeur et illustrateur en freelance.
+																																																																																																					
+																																																																													Eric
+				</p>
+				<hr>
+				<div>
+					{# lien contact #}
+					<button class="btn btn-success">
+						<a href="{{ path('contact_email' ) }}" class="bouton">Contact</a>
+					</button>
+				</div>
+			</div>
 		</div>
+		<script>
+			function bougeCode() {
+document.getElementById('banniere').classList.add('code');
+};
+
+
+function upCode() {
+document.getElementById('banniere').classList.remove('code');
+};
+
+
+function bougeDesign() {
+document.getElementById('banniere').classList.add('design');
+};
+
+
+function upDesign() {
+document.getElementById('banniere').classList.remove('design');
+};
+		</script>
 	{% endblock %}
