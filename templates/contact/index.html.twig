@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact
+{% endblock %}
+
+{% block body %}
+	<!-- Contact -->
+	<section id="contact" class="bg-white">
+
+		<h2 class="text-center mt-5">Contactez moi</h2>
+		<p class="text-center">Je vous répondrai dans les meilleurs delais.
+		</p>
+
+
+		<div
+			class="container text-center">
+			{#<div id="sendmessage">Votre message a bien été envoyé. Merci !</div>#}
+			<div id="errormessage"></div>
+			<div>
+				{{ form_start(form)}}
+				{{ form_row(form.name, {'attr': {'placeholder': "Votre nom"}})}}
+				{{ form_row(form.email, {'attr': {'placeholder': "Votre email"}})}}
+				{{ form_row(form.subject, {'attr': {'placeholder': "Sujet de votre message"}})}}
+				{{ form_row(form.message, {'attr': {'placeholder': "Votre message"}})}}<!-- captcha -->
+				<!-- Notre boite de vérification --><div class="g-recaptcha" data-sitekey="6LeGor4aAAAAAL80iH6M8nm0v4-RnnYog7H2_PcB"> </div>
+				<!-- fin captcha -->
+				<div class="form-group">
+
+					<div class="text-center">
+						<button type="submit" class="btn btn-success btn-lg btn-block">Envoyer un message</button>
+					</div>
+
+				</div>
+				{{ form_end(form)}}
+			</div>
+			<button class="btn btn-success mt-5">
+				<a href="{{ path('home' ) }}" class="bouton text-center">Accueil</a>
+			</button>
+		</div>
+
+	</section>
+
+{% endblock %}
