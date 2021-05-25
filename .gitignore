@@ -9,6 +9,7 @@
 /vendor/
 /src/Controller/ContactController.php
 /src/Controller/HomeController.php
+/templates/contact/index.html.twig
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###
