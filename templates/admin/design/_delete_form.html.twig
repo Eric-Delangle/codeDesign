@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('admin_design_delete', {'id': design.id}) }}" onsubmit="return confirm('Tu es sur de vouloir supprimer ce design ?');">
+	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ design.id) }}">
+	<button class="btn btn-danger">Supprimer</button>
+</form>

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block steelsheets %}{% endblock %}
+
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block title %}
+	Créer un compte.
+{% endblock %}
+{% block body %}
+	<div class="container site-content">
+		<h2 class="text-center mt-3">Création de votre compte</h2>
+		<br>
+		<div class="row">
+			<div class="col">
+
+				{{ form_start(form)}}
+				{{ form_row(form.firstName, {'attr': {'placeholder': "Votre prénom"}})}}
+				{{ form_row(form.lastName, {'attr': {'placeholder': "Votre nom"}})}}
+				{{ form_rest(form)}}
+				{{ form_end(form)}}
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

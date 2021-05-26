@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin code index
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<h1>Liste des sites codés</h1>
+
+		<table class="table mt-3">
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Slug</th>
+					<th>Image</th>
+					<th>Créé le</th>
+					<th>Modifié le</th>
+					<th>Description</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for code in codes %}
+					<tr>
+						<td>{{ code.name }}</td>
+						<td>{{ code.slug }}</td>
+						<td>
+							<figure class="images">
+								<a href="{{ path('code_show', {'slug': code.slug}) }}"><img src=" {{ asset(['images/photos/', code.picture]|join) }} " class="images" alt="code"></a>
+								<figcaption>
+									<div class="titre-legende text-center">
+										<h3>{{ code.name | capitalize}}</h3>
+										<p>{{ code.description | capitalize}}</p>
+
+									</div>
+								</figcaption>
+							</figure>
+						</td>
+						<td>{{ code.createdAt ? code.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+						<td>{{ code.updatedAt ? code.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+						<td>{{ code.description }}</td>
+						<td>
+							<a href="{{ path('admin_code_show', {'slug': code.slug}) }}">voir</a>
+							<a href="{{ path('admin_code_edit', {'slug': code.slug}) }}">editer</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="8">Pas de sites trouvés.</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<ul class="deco-none">
+			<li>
+				<a href="{{ path('admin_code_new') }}">Nouveau site</a>
+			</li>
+			<li>
+				<a href="{{ path('admin') }}">Accueil admin</a>
+			</li>
+		</ul>
+
+
+	</div>
+
+{% endblock %}

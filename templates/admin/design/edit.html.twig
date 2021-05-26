@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edition d'un design
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<h1 class="mt-3">Editer ce design</h1>
+
+		{{ include('admin/design/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+		<a href="{{ path('admin_design_index') }}">retour à la liste</a>
+
+		{{ include('admin/design/_delete_form.html.twig') }}
+
+	</div>
+
+{% endblock %}

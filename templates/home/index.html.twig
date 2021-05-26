@@ -7,26 +7,26 @@
 	<div class="container text-center">
 		<div>
 
-			<img id="banniere" src="images/design/codeDesign.png" alt="" usemap="#map1621695888767" style="no-repeat">
+			<img id="banniere" src="images/designs/codeDesign.png" alt="" usemap="#map1621695888767" style="no-repeat">
 			<map id="map1621695888767" name="map1621695888767">
 
 
-				<area onmouseover="bougeCode(this)" onmouseout="upCode(this)" shape="rect" coords="105,190,169,219" title="code" alt="code" href="https://ericdelangle.fr/code" target="_self">
+				<area onmouseover="bougeCode(this)" onmouseout="upCode(this)" shape="rect" coords="105,190,169,219" title="code" alt="code" href="{{ path('code_index' ) }}" target="_self">
 
-				<area onmouseover="bougeDesign(this)" onmouseout="upDesign(this)" class="design" shape="rect" coords="363,198,468,241" title="design" alt="design" href="https://ericdelangle.fr/design" target="_self">
+				<area onmouseover="bougeDesign(this)" onmouseout="upDesign(this)" class="design" shape="rect" coords="363,198,468,241" title="design" alt="design" href="{{ path('design_index' ) }}" target="_self">
 
 			</div>
-			<div class="container">
+			<div class="container mt-3">
 				<p class="text-center intro">
 					C'est après avoir créé mes propres sites persos au fil de mes activités de peintre que je suis arrivé au développement.
-																																																																																																										
-																																																																																		J'ai appris à utiliser le framework Symfony de façon a créer des applications sures et robustes. Je continue mon apprentissage en étudiant le développement front-end avec React.
-																																																																																																										
-																																																																																		Afin de sortir un peu de l'isolement créé par la pratique du code et de la peinture je propose le dépannage informatique pour les particuliers.
-																																																																																																										
-																																																																																		J'exerce maintenant mon activité de développeur et illustrateur en freelance.
-																																																																																																										
-																																																																																		Eric
+																																																																																																																																																		
+																																																																																																																										J'ai appris à utiliser le framework Symfony de façon a créer des applications sures et robustes. Je continue mon apprentissage en étudiant le développement front-end avec React.
+																																																																																																																																																		
+																																																																																																																										Afin de sortir un peu de l'isolement créé par la pratique du code et de la peinture je propose le dépannage informatique pour les particuliers.
+																																																																																																																																																		
+																																																																																																																										J'exerce maintenant mon activité de développeur et illustrateur en freelance.
+																																																																																																																																																		
+																																																																																																																										Eric
 				</p>
 				<hr>
 				<div>
@@ -34,6 +34,17 @@
 					<button class="btn btn-success">
 						<a href="{{ path('contact_email' ) }}" class="bouton">Contact</a>
 					</button>
+				</div>
+				<div class="inscCo">
+					<a class="nav-link" id="inscription" href="{{ path('security_registration') }}" tabindex="-1" aria-disabled="true">
+						<i class="fas fa-user-circle"></i>
+						Inscription</a>
+					<a class="nav-link" id="connexion" href="{{ path('security_login') }}" tabindex="-1" aria-disabled="true">
+						<i class="fas fa-sign-in-alt"></i>
+						Connexion</a>
+					<a class="nav-link" id="deconnexion" href="{{ path('security_logout') }}" tabindex="-1" aria-disabled="true">
+						<i class="fas fa-sign-out-alt"></i>
+						Déconnexion</a>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edition d'un site
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<h1 class="mt-3">Editer ce site</h1>
+
+		{{ include('admin/code/_form.html.twig', {'button_label': 'Update'}) }}
+
+		<a href="{{ path('admin_code_index') }}">retour à la liste</a>
+
+		{{ include('admin/code/_delete_form.html.twig') }}
+
+	</div>
+
+{% endblock %}

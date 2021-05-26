@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Code index
+{% endblock %}
+
+{% block body %}
+
+	<div id="#bloc-images" class="container">
+		<h1 class="text-center mt-5 intro back">Les sites codés</h1>
+
+		<div id="portfolio" class="mt-5">
+			{% for code in codes %}
+
+				<figure class="images">
+					<a href="{{ path('code_show', {'slug': code.slug}) }}"><img src=" {{ asset(['images/photos/', code.picture]|join) }} " class="images" alt="code"></a>
+					<figcaption>
+						<div class="text-center intro name-size">
+							<h3>{{ code.name | capitalize}}</h3>
+
+						</div>
+					</figcaption>
+				</figure>
+
+			{% else %}
+
+				<p>Pas de sites trouvés.</p>
+
+			{% endfor %}
+
+
+		</div>
+
+
+	</div>
+	<div class="container text-center">
+		<button class="btn btn-success btn-sm">
+			<a href="{{ path('home') }}" class="bouton">Accueil</a>
+		</button>
+	</div>
+
+{% endblock %}

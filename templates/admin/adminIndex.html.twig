@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Administration
+{% endblock %}
+{% block body %}
+	<div class="container mt-5">
+		<h1>Salut
+			{{ app.user.firstName | capitalize }}</h1>
+
+		<button class="btn btn-success">
+			<a href="{{ path('admin_code_index' ) }}" class="bouton">Code</a>
+		</button>
+		<button class="btn btn-success">
+			<a href="{{ path('admin_design_index' ) }}" class="bouton">Design</a>
+		</button>
+		<button class="btn btn-success">
+			<a href="{{ path('home' ) }}" class="bouton">Accueil</a>
+		</button>
+	</div>
+
+{% endblock %}

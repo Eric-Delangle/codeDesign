@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Code
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<h1>Nouveau site</h1>
+
+		{{ include('admin/code/_form.html.twig') }}
+
+		<a href="{{ path('admin_code_index') }}">Retour à la liste</a>
+
+	</div>
+
+{% endblock %}

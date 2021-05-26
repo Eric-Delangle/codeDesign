@@ -102,6 +102,20 @@
   font-family: rubikblack, arial;
 }
 
+/* background de titre */
+
+.back {
+  background-color: #97bfbf;
+  width: 300px;
+  height: auto;
+}
+
+/* taille du titre */
+
+.title-size {
+  font-size: 2em;
+}
+
 /* boutons */
 
 .bouton {
@@ -111,6 +125,7 @@
 
 a {
   font-family: rubikblack, arial;
+  color: #97bfbf;
 }
 
 a:hover {
@@ -128,4 +143,40 @@ a:hover {
 #contact {
   font-family: rubikblack, arial;
   margin-top: 150px;
+}
+
+/* cacher les liens inscription connexion */
+
+.inscCo {
+  display: none;
+}
+
+/* tailles des photos */
+
+.images {
+  width: 500px;
+  height: auto;
+}
+
+.images-grandes {
+  width: 800px;
+  height: auto;
+}
+
+/* disposition des photos */
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  column-gap: 20px;
+}
+
+/* lien des listes à puces */
+
+.deco-none {
+  text-decoration: none;
+  list-style: none;
 }

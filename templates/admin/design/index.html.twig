@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin design index
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<h1>Liste designs</h1>
+
+		<table class="table mt-3">
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Slug</th>
+					<th>Image</th>
+					<th>Créé le</th>
+					<th>Modifié le</th>
+					<th>Description</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for design in designs %}
+					<tr>
+						<td>{{ design.name }}</td>
+						<td>{{ design.slug }}</td>
+						<td>
+							<figure class="images">
+								<a href="{{ path('design_show', {'slug': design.slug}) }}"><img src=" {{ asset(['images/photos/', design.picture]|join) }} " class="images" alt="code"></a>
+								<figcaption>
+									<div class="titre-legende text-center">
+										<h3>{{ design.name | capitalize}}</h3>
+										<p>{{ design.description | capitalize}}</p>
+
+									</div>
+								</figcaption>
+							</figure>
+						</td>
+						<td>{{ design.createdAt ? design.createdAt|date('d-m-Y') : '' }}</td>
+						<td>{{ design.updatedAt ? design.updatedAt|date('d-m-Y') : '' }}</td>
+						<td>{{ design.description }}</td>
+						<td>
+							<a href="{{ path('admin_design_show', {'slug': design.slug}) }}">voir</a>
+							<a href="{{ path('admin_design_edit', {'slug': design.slug}) }}">editer</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="8">Pas de graphismes trouvés.</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<ul class="deco-none">
+			<li>
+				<a href="{{ path('admin_design_new') }}">Nouveau design</a>
+			</li>
+			<li>
+				<a href="{{ path('admin') }}">Accueil admin</a>
+			</li>
+		</ul>
+
+	</div>
+
+{% endblock %}
