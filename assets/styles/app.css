@@ -96,6 +96,12 @@
   background-image: url("images/moi.png");
 }
 
+/* liseret */
+
+.liseret {
+  border-top: 4px solid #97bfbf;
+}
+
 /* police de l'intro */
 
 .intro {
@@ -160,6 +166,11 @@ a:hover {
 
 .images-grandes {
   width: 800px;
+  height: auto;
+}
+
+.images-design {
+  width: 300px;
   height: auto;
 }
 

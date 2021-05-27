@@ -11,8 +11,8 @@
 		<div id="portfolio" class="mt-5">
 			{% for design in designs %}
 
-				<figure class="images">
-					<a href="{{ path('design_show', {'slug': design.slug}) }}"><img src=" {{ asset(['images/photos/', design.picture]|join) }} " class="images" alt="design"></a>
+				<figure class="images text-center">
+					<a href="{{ path('design_show', {'slug': design.slug}) }}"><img src=" {{ asset(['images/photos/', design.picture]|join) }} " class="images-design" alt="design"></a>
 					<figcaption>
 						<div class="text-center intro name-size">
 							<h3>{{ design.name | capitalize}}</h3>
