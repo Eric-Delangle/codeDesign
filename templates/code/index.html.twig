@@ -12,7 +12,7 @@
 			{% for code in codes %}
 
 				<figure class="images">
-					<a href="{{ path('code_show', {'slug': code.slug}) }}"><img src=" {{ asset(['images/photos/', code.picture]|join) }} " class="images" alt="code"></a>
+					<a href="{{ path('code_show', {'slug': code.slug}) }}"><img src=" {{ asset([ code.picture]|join) }} " class="images" alt="code"></a>
 					<figcaption>
 						<div class="text-center intro name-size">
 							<h3>{{ code.name | capitalize}}</h3>

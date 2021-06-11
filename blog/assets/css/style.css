@@ -1,0 +1,406 @@
+
+body {
+  outline-style: none;
+}
+
+.captcha {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* message d'inscription js */
+#retour {
+  
+  width: 25%;
+  height: 50px;
+  line-height: 4;
+  font-family: milkshake, arial, time;
+  color: #ffffff;
+  font-size: 1.5em;
+  border-radius: 50%;
+  background-color:  rgb(69, 126, 231);
+  text-align: center;
+  line-height: 2;
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 30px;
+  box-shadow: 30px 30px 6px rgb(82, 80, 80);
+  z-index: 99;
+  text-decoration: none;
+}
+
+#anim {
+    margin: 0 auto;
+}
+
+#si_responsive {
+  display: none;
+}
+
+/* style de la nav */
+
+.codeco {
+  display: flex;
+  margin: 20px auto;
+}
+
+.page_menu {
+  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.bloc_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#bloc_form_contact {
+  margin-right: 820px;
+  margin-top: -300px;
+}
+
+.menu {
+  display: flex;
+  text-decoration: none;
+  list-style: none ;
+}
+
+.menu i {
+  color: hsl(0, 0%, 2%);
+}
+
+.menu li {
+  margin: 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+.menu li a:hover {
+  color: hsl(243, 10%, 59%);
+}
+
+.liens_h1 {
+background-color: hsl(244, 88%, 3%);
+height: 30px;
+color: #ffffff;
+border: 10px 10px;
+outline-style: none;
+cursor: pointer;
+width: 150px;
+text-align: center;
+text-decoration: none;
+padding: 10px;
+line-height: 0;
+}
+
+.liens_rouges {
+  background-color: hsl(0, 0%, 4%);
+  border-radius: 50%;
+  height: 30px;
+  color: #ffffff;
+  border: 10px 10px;
+  outline-style: none;
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+  }
+.liens_h1:hover, .liens_rouges:hover {
+  background-color: #645b55;
+}
+
+.liens_h1 a {
+  font-size: 0.5em;
+  text-decoration: none;
+}
+/* fin style de la nav */
+
+/* style du centre de la page */
+
+.infos_sur_le_site {
+  text-align: center;
+  font-size: 3em;
+}
+
+
+
+/* style de la page article */
+
+#editeur {
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 5px; 
+  overflow: auto;
+}
+
+.editButton {
+  background-color: #645b55;
+  
+  color: #ffffff;
+}
+
+/* hauteur du titre */
+
+#title {
+  
+  margin-top: -200px;
+  justify-content: center;
+}
+
+ /* h1 de article */
+
+ #art {
+   text-align: center;
+ }
+
+ /* Page editArticles.php */
+
+ .messageDeBienvenue {
+   text-align: center;
+ }
+
+ /* les liens */
+
+ .disposition {
+   display: flex;
+   justify-content: space-around;
+ }
+
+ /* page de changement d'identifiants */
+
+ h2 {
+   text-align: center;
+ }
+
+ /* page chapitre partie */
+
+#connecter {
+  font-size: 1em;
+}
+
+ .cadre_articles {
+   border: 1px solid grey;
+   border-radius: 15px 15px 15px 15px;
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 50px auto;
+   padding: 10px 20px;
+   text-decoration: none;
+   text-align: center;
+  }
+
+  .cadre_articles a {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px 20px;
+   }
+
+  .centrage_article {
+    width: 30%;
+    margin: 30px 80px;
+  }
+
+  #explication {
+    text-align: center;
+  }
+
+  #articlePosition {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .aligntext {
+    text-align: center;
+  }
+  
+  .extraitArt {
+    text-align: center;
+  }
+
+  .extraitArt span {
+    font-size: 2em;
+  }
+
+  #table  {
+  text-align: center;
+  }
+
+  .tableau  {
+    margin: 0 auto;
+    border: 1px solid grey;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 10px 10px #55576426;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+   }
+  /* page de contact */
+
+  #bloc_form_contact {
+    margin: 0 auto;
+  }
+
+  #bloc_form_contact input {
+    width: 50%;
+    height: 30px;
+  }
+
+  #bloc_form_contact textarea {
+    width: 50%;
+    height: 100px;
+  }
+
+  /* Section de commentaire */
+
+  #commentaires {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+  }
+
+  .ajoutComment {
+    text-align: center;
+  }
+
+  #commentName {
+    text-align: center;
+  }
+
+  #bloc_comments textarea {
+    width: 100%;
+    height: 100px;
+  }
+/* Disposition de mes liens article suivant et articles precedent */
+
+  #divSuivPrec { 
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* trucs divers */
+  .erreur {
+    text-align: center;
+  }
+
+  /* Interface admin */
+
+  .cadre_interface {
+    border: 1px solid grey;
+   border-radius: 15px 15px 15px 15px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0 20px;
+   padding: 10px 20px;
+   text-decoration: none;
+   text-align: center;
+  }
+  
+  .cadre {
+    border: 1px solid grey;
+    border-radius: 15px 15px 15px 15px;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .cadre_tyni {
+    border: 1px solid grey;
+    border-radius: 15px 15px 15px 15px;
+    margin: 0 20px;
+    padding: 10px 10px;
+  }
+
+  #comSign {
+    width: 50%;
+    margin: 0 auto;
+   }
+
+   .lien_sign_com {
+     display: flex;
+     justify-content: center;
+     text-decoration: none;
+   }
+
+#vueArtMaj {
+  text-align: center;
+}
+#vueComSign {
+  text-align: center;
+}
+
+#cadre_comSign {
+  border: 1px solid grey;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+#captcha {
+  position: relative;
+  left: 240px;
+}
+
+#precsuiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Messages de redirection */
+
+.redirectMessage {
+    width: 60%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* --  ==== MEDIAQUERIES ====  -- */
+
+
+@media all and (max-width: 1024px) {  /* ipad */
+ 
+  #captcha {
+      left: 95px;
+    }
+
+  .infos_sur_le_site {
+    display: none;
+  }
+
+  #si_responsive {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    }
+}
+@media all and (max-width: 480px) {  /* smartphone */
+
+  #captcha {
+      left: 90px;
+    }
+}
